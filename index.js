@@ -172,6 +172,10 @@ var compile = function(sources, options, callback) {
       // Reorder ABI so functions are listed in the order they appear
       // in the source file. Solidity tests need to execute in their expected sequence.
       contract_definition.abi = orderABI(contract_definition);
+    
+      if (options.rawData) {
+        contract_definition.rawData = contract;
+      }
 
       // Go through the link references and replace them with older-style
       // identifiers. We'll do this until we're ready to making a breaking
