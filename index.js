@@ -85,7 +85,8 @@ var compile = function(sources, options, callback) {
             "evm.bytecode.object",
             "evm.bytecode.sourceMap",
             "evm.deployedBytecode.object",
-            "evm.deployedBytecode.sourceMap"
+            "evm.deployedBytecode.sourceMap",
+            "metadata"
           ]
         },
       }
